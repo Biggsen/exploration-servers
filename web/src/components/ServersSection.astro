@@ -1,0 +1,55 @@
+---
+import ButtonLink from "./ButtonLink.astro";
+---
+
+<section
+  id="servers"
+  class="border-b border-line/60 bg-parchment py-14 md:py-[4.5rem] lg:py-24"
+  aria-labelledby="servers-title"
+>
+  <div class="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
+    <div class="max-w-[760px]">
+      <h2
+        id="servers-title"
+        class="font-display text-3xl font-semibold leading-tight text-ink md:text-[28px] md:leading-[1.15]"
+      >
+        Exploration servers
+      </h2>
+      <p class="mt-3 text-base leading-relaxed text-ink-body">
+        Servers that implement this model — start here when you’re ready to play.
+      </p>
+    </div>
+
+    <article
+      class="mt-10 max-w-4xl rounded-[24px] border border-line bg-white/60 p-6 shadow-sm backdrop-blur-sm sm:p-8 md:p-10"
+    >
+      <div class="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
+        <div>
+          <h3 class="font-display text-2xl font-semibold text-ink">Charidh</h3>
+          <p class="mt-2 max-w-xl text-sm leading-relaxed text-ink-body">
+            A survival world structured around named regions, tracked discoveries, and rewards for
+            exploration.
+          </p>
+          <p class="mt-3 text-sm text-ink-muted">
+            <span class="font-medium text-ink">Online</span>
+            <span class="mx-2 text-line">·</span>
+            <span>Java · Survival</span>
+          </p>
+        </div>
+        <div class="shrink-0 md:text-right">
+          <p class="text-sm font-medium text-ink">30 regions · 56 villages · 140+ structures</p>
+        </div>
+      </div>
+      <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+        <ButtonLink href="#" variant="primary" class="sm:w-auto">Join Charidh</ButtonLink>
+        <ButtonLink href="#how-it-works" variant="secondaryLight" class="sm:w-auto">
+          How it works
+        </ButtonLink>
+      </div>
+    </article>
+
+    <p class="mt-8 max-w-xl text-sm text-ink-muted">
+      More servers are welcome as implementations mature — this hub stays concept-first.
+    </p>
+  </div>
+</section>

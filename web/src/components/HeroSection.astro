@@ -1,0 +1,80 @@
+---
+import ButtonLink from "./ButtonLink.astro";
+---
+
+<section
+  id="top"
+  class="relative min-h-[max(90vh,51.25rem)] border-b border-white/5 bg-canvas pt-24 pb-16 lg:pt-[7.5rem] lg:pb-24"
+  aria-labelledby="hero-title"
+>
+  <div
+    class="pointer-events-none absolute inset-0 opacity-[0.07]"
+    aria-hidden="true"
+    style="background-image: linear-gradient(rgba(194,168,120,0.35) 1px, transparent 1px), linear-gradient(90deg, rgba(194,168,120,0.35) 1px, transparent 1px); background-size: 48px 48px;"
+  >
+  </div>
+
+  <div
+    class="relative mx-auto grid max-w-[1200px] items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-10 lg:px-8"
+  >
+    <div class="order-1 lg:order-none">
+      <p class="text-xs font-semibold uppercase tracking-[0.2em] text-gilt/90">
+        Concept
+      </p>
+      <h1
+        id="hero-title"
+        class="mt-3 max-w-[14ch] font-display text-4xl font-semibold leading-[1.05] text-fog sm:text-5xl lg:text-[2.75rem] xl:text-[2.75rem]"
+      >
+        Exploration, Reimagined
+      </h1>
+      <p class="mt-5 max-w-[560px] text-lg leading-relaxed text-mist">
+        A different way to play Minecraft survival. A world where travel matters, discoveries
+        persist, and exploration drives progression.
+      </p>
+      <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+        <ButtonLink href="#servers" variant="primary">Explore Servers</ButtonLink>
+        <ButtonLink href="#how-it-works" variant="secondaryDark">How It Works</ButtonLink>
+      </div>
+      <p class="mt-6 text-sm text-dim">
+        Named regions · Structured discovery · Persistent progression
+      </p>
+    </div>
+
+    <div class="order-2 lg:order-none" aria-hidden="true">
+      <div
+        class="relative mx-auto aspect-[5/4] w-full max-w-lg overflow-hidden rounded-[24px] border border-white/10 bg-elevated shadow-[0_24px_80px_rgba(0,0,0,0.45)]"
+      >
+        <div
+          class="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_20%,rgba(194,168,120,0.2),transparent_55%),radial-gradient(ellipse_at_80%_70%,rgba(62,92,71,0.35),transparent_50%)]"
+        >
+        </div>
+        <svg
+          class="absolute inset-0 h-full w-full text-gilt/25"
+          viewBox="0 0 400 320"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M40 240 C120 180, 160 260, 220 200 S320 120, 380 80"
+            stroke="currentColor"
+            stroke-width="1.2"></path>
+          <path
+            d="M60 100 C140 140, 200 40, 280 90 S360 200, 340 260"
+            stroke="currentColor"
+            stroke-width="0.9"
+            opacity="0.7"></path>
+          <circle cx="120" cy="160" r="3" fill="currentColor" opacity="0.8"></circle>
+          <circle cx="248" cy="112" r="2.5" fill="currentColor" opacity="0.7"></circle>
+          <circle cx="300" cy="200" r="2.5" fill="currentColor" opacity="0.6"></circle>
+        </svg>
+        <div
+          class="absolute bottom-4 left-4 rounded-md border border-white/10 bg-canvas/70 px-3 py-2 text-xs text-mist backdrop-blur-sm"
+        >
+          <span class="text-gilt/90">Region outline</span>
+          <span class="mx-2 text-dim">·</span>
+          <span>Atlas view</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

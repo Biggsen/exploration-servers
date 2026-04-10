@@ -1,0 +1,32 @@
+---
+const cards = [
+  "Worlds are vast, but forgettable",
+  "Structures are found once, then ignored",
+  "Progress comes from farming, not discovering",
+];
+---
+
+<section
+  class="border-b border-white/5 bg-canvas py-14 md:py-[4.5rem] lg:py-24"
+  aria-labelledby="shift-title"
+>
+  <div class="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
+    <h2 id="shift-title" class="sr-only">The shift</h2>
+    <div class="grid gap-4 md:grid-cols-3">
+      {
+        cards.map((text) => (
+          <div
+            class="flex min-h-[120px] items-center rounded-[18px] border border-white/10 bg-elevated/80 px-6 py-6 text-center text-[17px] font-medium leading-snug text-fog shadow-sm backdrop-blur-sm md:text-left"
+          >
+            {text}
+          </div>
+        ))
+      }
+    </div>
+    <p
+      class="mx-auto mt-10 max-w-[760px] text-center font-display text-xl leading-snug text-mist md:text-2xl md:leading-snug"
+    >
+      Exploration exists. It just isn’t the reason you play.
+    </p>
+  </div>
+</section>

@@ -1,0 +1,35 @@
+---
+type Variant = "primary" | "secondaryDark" | "secondaryLight";
+
+interface Props {
+  variant?: Variant;
+  href: string;
+  class?: string;
+  rel?: string;
+  target?: string;
+}
+
+const {
+  variant = "primary",
+  class: className = "",
+  href,
+  rel,
+  target,
+} = Astro.props;
+
+const base =
+  "inline-flex items-center justify-center rounded-[12px] px-5 py-2.5 text-[15px] font-medium leading-tight transition-[color,background-color,border-color,opacity] duration-200 ease-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gilt";
+
+const variants: Record<Variant, string> = {
+  primary:
+    "bg-earth text-fog hover:bg-earth/90 focus-visible:outline-gilt shadow-sm",
+  secondaryDark:
+    "border border-mist/35 text-fog hover:border-mist/60 hover:bg-white/5",
+  secondaryLight:
+    "border border-line text-ink hover:border-ink/25 hover:bg-ink/5",
+};
+---
+
+<a class:list={[base, variants[variant], className]} href={href} rel={rel} target={target}>
+  <slot />
+</a>
