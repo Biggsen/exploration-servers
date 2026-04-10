@@ -1,6 +1,9 @@
 node_modules/
 dist/
 .astro/
+
+# Remove if present: leftover from old `web/` layout (Windows may lock native modules)
+/web/
 .env
 .env.*
 !.env.example
